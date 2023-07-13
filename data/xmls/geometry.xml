@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<geometry>
+  <cell id="1" material="3" region="-11 12 -13 14 15 -16 -9 10" universe="1" />
+  <cell id="2" material="1" region="-1 10 -9" universe="2" />
+  <cell id="3" material="5" region="1 -2 10 -9" universe="2" />
+  <cell id="4" material="3" region="2 -3 4 -5 6 7 -8 10 -9" universe="2" />
+  <cell fill="3" id="5" region="-11 12 -13 14 15 -16" universe="4" />
+  <hex_lattice id="3" n_rings="11" orientation="x">
+    <pitch>2.598076211353316</pitch>
+    <outer>1</outer>
+    <center>0 0</center>
+    <universes>
+          2 2 2 2 2 2 2 2 2 2 2
+         2 2 2 2 2 2 2 2 2 2 2 2
+        2 2 2 2 2 2 2 2 2 2 2 2 2
+       2 2 2 2 2 2 2 2 2 2 2 2 2 2
+      2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+     2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+   2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+  2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+  2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+   2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+     2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+      2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+       2 2 2 2 2 2 2 2 2 2 2 2 2 2
+        2 2 2 2 2 2 2 2 2 2 2 2 2
+         2 2 2 2 2 2 2 2 2 2 2 2
+          2 2 2 2 2 2 2 2 2 2 2</universes>
+  </hex_lattice>
+  <surface coeffs="0.0 0.0 0.9" id="1" type="z-cylinder" />
+  <surface coeffs="0.0 0.0 1.0" id="2" type="z-cylinder" />
+  <surface boundary="periodic" coeffs="2.25" id="3" periodic_surface_id="4" type="y-plane" />
+  <surface boundary="periodic" coeffs="-2.25" id="4" periodic_surface_id="3" type="y-plane" />
+  <surface boundary="periodic" coeffs="1.7320508075688772 1.0 0.0 4.5" id="5" periodic_surface_id="7" type="plane" />
+  <surface boundary="periodic" coeffs="-1.7320508075688772 1.0 0.0 -4.5" id="6" periodic_surface_id="8" type="plane" />
+  <surface boundary="periodic" coeffs="1.7320508075688772 1.0 0.0 -4.5" id="7" periodic_surface_id="5" type="plane" />
+  <surface boundary="periodic" coeffs="-1.7320508075688772 1.0 0.0 4.5" id="8" periodic_surface_id="6" type="plane" />
+  <surface boundary="vacuum" coeffs="175.0" id="9" type="z-plane" />
+  <surface boundary="vacuum" coeffs="-175.0" id="10" type="z-plane" />
+  <surface boundary="vacuum" coeffs="24.75" id="11" type="y-plane" />
+  <surface boundary="vacuum" coeffs="-24.75" id="12" type="y-plane" />
+  <surface boundary="vacuum" coeffs="1.7320508075688772 1.0 0.0 49.5" id="13" type="plane" />
+  <surface boundary="vacuum" coeffs="-1.7320508075688772 1.0 0.0 -49.5" id="14" type="plane" />
+  <surface boundary="vacuum" coeffs="1.7320508075688772 1.0 0.0 -49.5" id="15" type="plane" />
+  <surface boundary="vacuum" coeffs="-1.7320508075688772 1.0 0.0 49.5" id="16" type="plane" />
+</geometry>
