@@ -1,3 +1,5 @@
+from math import sqrt
+
 import openmc
 
 
@@ -23,7 +25,7 @@ if __name__ == "__main__":
     # Plotting by universe...
     colors = {water_mat: (120, 120, 255), cladding_mat: 'black', fuel_mat: 'green'}
     color_data = dict(color_by='material', colors=colors)
-    width = (params.TVS_edge_lenght*2.1, params.TVS_edge_lenght*2.1)
+    width = (params.TVS_edge_lenght*5.1, params.TVS_edge_lenght*5.1)
 
     fig, ax = plt.subplots(2, 2)
 
@@ -55,7 +57,7 @@ if __name__ == "__main__":
     setting.inactive = 10
     setting.particles = 5000
 
-    uniform_dist = openmc.stats.Box([-10, -10, -3500 / 2], [10, 10, 3500 / 2], only_fissionable=True)
+    uniform_dist = openmc.stats.Box([-100, -100, -350 / 2], [100, 100, 350 / 2], only_fissionable=True)
     setting.source = openmc.source.Source(space=uniform_dist)
 
     # Tallies

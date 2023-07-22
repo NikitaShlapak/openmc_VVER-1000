@@ -10,17 +10,41 @@ p = GeometryParams()
 # Surfaces
 fuel_surf = openmc.ZCylinder(r=p.tvel_fuel_radius)
 cladding_surf = openmc.ZCylinder(r=p.tvel_global_radius)
-water_surf = openmc.hexagonal_prism(edge_length=p.tvel_step, orientation=p.orientation, boundary_type='periodic')
+water_surf = openmc.hexagonal_prism(edge_length=p.tvel_step, orientation=p.orientation,boundary_type='transmission' )
 
 top_surf = openmc.ZPlane(z0=p.tvel_heigh / 2)
 bottom_surf = openmc.ZPlane(z0=-p.tvel_heigh / 2)
 
-hex_lat_surf = openmc.hexagonal_prism(edge_length=p.TVS_edge_lenght,orientation=p.orientation, boundary_type='vacuum')
+TVS_hex_lat_surf = openmc.hexagonal_prism(edge_length=p.TVS_edge_lenght, orientation=p.orientation, boundary_type='transmission')
 
+hex_lat_surf_1 = openmc.hexagonal_prism(edge_length=p.TVS_edge_lenght, orientation=p.orientation, boundary_type='vacuum',
+                                        origin=(0,p.TVS_edge_lenght*sqrt(3)))
+hex_lat_surf_4 = openmc.hexagonal_prism(edge_length=p.TVS_edge_lenght, orientation=p.orientation,boundary_type='vacuum',
+                                        origin=(0,-p.TVS_edge_lenght*sqrt(3)))
+
+hex_lat_surf_2 = openmc.hexagonal_prism(edge_length=p.TVS_edge_lenght, orientation=p.orientation,boundary_type='vacuum',
+                                        origin=(p.TVS_edge_lenght*1.5,p.TVS_edge_lenght*sqrt(3)/2))
+hex_lat_surf_3 = openmc.hexagonal_prism(edge_length=p.TVS_edge_lenght, orientation=p.orientation,boundary_type='vacuum',
+                                        origin=(p.TVS_edge_lenght*1.5,-p.TVS_edge_lenght*sqrt(3)/2))
+
+hex_lat_surf_5 = openmc.hexagonal_prism(edge_length=p.TVS_edge_lenght, orientation=p.orientation,boundary_type='vacuum',
+                                        origin=(-p.TVS_edge_lenght*1.5,-p.TVS_edge_lenght*sqrt(3)/2))
+hex_lat_surf_6 = openmc.hexagonal_prism(edge_length=p.TVS_edge_lenght, orientation=p.orientation,boundary_type='vacuum',
+                                        origin=(-p.TVS_edge_lenght*1.5,p.TVS_edge_lenght*sqrt(3)/2))
+
+hex_lat_surf = TVS_hex_lat_surf | hex_lat_surf_1 | hex_lat_surf_2 | hex_lat_surf_3 | hex_lat_surf_4 | hex_lat_surf_5 | hex_lat_surf_6
+
+hex_lat_surf.boundary_type = 'vacuum'
 top_surf.boundary_type = 'vacuum'
 bottom_surf.boundary_type = 'vacuum'
 
 # Geometry
+
+# 1 TVS container
+TVS_container_cell = openmc.Cell(fill=water_mat, region=TVS_hex_lat_surf & -top_surf & +bottom_surf)
+TVS_container_universe = openmc.Universe(cells=[TVS_container_cell])
+
+# 7 TVS container
 container_cell = openmc.Cell(fill=water_mat, region=hex_lat_surf & -top_surf & +bottom_surf)
 container_universe = openmc.Universe(cells=[container_cell])
 
@@ -31,20 +55,35 @@ water_cell = openmc.Cell(fill=water_mat, region=+cladding_surf & water_surf & +b
 
 sub_universe = openmc.Universe(cells=[fuel_cell, cladding_cell, water_cell])
 
-# 2. lattice
+# 2. 1 TVS lattice
+TVS_hex_lat = openmc.HexLattice()
+TVS_hex_lat.orientation=p.orientation
+TVS_hex_lat.center = (0,0)
+TVS_hex_lat.pitch = [p.tvel_step]
 
-
-hex_lat = openmc.HexLattice()
-hex_lat.orientation=p.orientation
-hex_lat.center = (0,0)
-hex_lat.pitch = [p.tvel_step]
-
-lat_center = [sub_universe]
-lat_rings = []
+TVS_lat_center = [sub_universe]
+TVS_lat_rings = []
 for i in range(1, p.n_tvel_rows):
-    lat_rings.append([sub_universe]*6*i)
-lat_rings.reverse()
-hex_lat.universes = [*lat_rings, lat_center]
+    TVS_lat_rings.append([sub_universe]*6*i)
+TVS_lat_rings.reverse()
+TVS_hex_lat.universes = [*TVS_lat_rings, TVS_lat_center]
+TVS_hex_lat.outer = TVS_container_universe
+
+TVS_lat_cell = openmc.Cell(region=TVS_hex_lat_surf, fill=TVS_hex_lat)
+
+TVS_universe = openmc.Universe(cells=[TVS_lat_cell])
+# universe = openmc.Universe(cells=[container_cell])
+
+# 7 TVS lattice
+
+hex_lat = openmc.HexLattice(lattice_id=228)
+hex_lat.orientation='y'
+hex_lat.center = (0,0)
+hex_lat.pitch = [p.TVS_edge_lenght*sqrt(3)]
+
+lat_center = [TVS_universe]
+lat_ring = [TVS_universe]*6
+hex_lat.universes = [lat_ring, lat_center]
 hex_lat.outer = container_universe
 
 lat_cell = openmc.Cell(region=hex_lat_surf, fill=hex_lat)
