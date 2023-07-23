@@ -1,0 +1,1 @@
+# VVER-1000 geometry and calculations with OpenMC

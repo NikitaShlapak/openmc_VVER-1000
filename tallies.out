@@ -1,20 +1,41 @@
  =========================>     TALLY 2: FUEL     <=========================
 
  U235
-   Fission Rate                         0.22842 +/- 0.000819419
-   Total Reaction Rate                  0.370946 +/- 0.00100925
-   Absorption Rate                      0.283054 +/- 0.000976619
-   (n,elastic)                          0.0778356 +/- 0.000139776
-   Scattering Rate                      0.0878919 +/- 0.00015425
-   Decay Rate                           0.00151444 +/- 5.39798e-06
+   Fission Rate                         0.111873 +/- 0.000550112
+   Total Reaction Rate                  0.169684 +/- 0.000697283
+   Absorption Rate                      0.136885 +/- 0.000657437
+   (n,elastic)                          0.0287175 +/- 5.47524e-05
+   Scattering Rate                      0.0327994 +/- 5.78473e-05
+   Decay Rate                           0.00074027 +/- 3.62593e-06
  U238
-   Fission Rate                         0.0225987 +/- 5.662e-05
-   Total Reaction Rate                  1.93381 +/- 0.00354441
-   Absorption Rate                      0.12875 +/- 0.000376337
-   (n,elastic)                          1.55262 +/- 0.00298574
-   Scattering Rate                      1.80506 +/- 0.0033375
-   Decay Rate                           0.00081653 +/- 2.01213e-06
+   Fission Rate                         0.0142322 +/- 3.63697e-05
+   Total Reaction Rate                  1.02708 +/- 0.00185747
+   Absorption Rate                      0.0768458 +/- 0.000287779
+   (n,elastic)                          0.803071 +/- 0.00156712
+   Scattering Rate                      0.950237 +/- 0.00167373
+   Decay Rate                           0.000513679 +/- 1.30252e-06
+ Gd152
+   Fission Rate                         0 +/- 0
+   Total Reaction Rate                  1.72401e-05 +/- 3.44937e-07
+   Absorption Rate                      5.32509e-06 +/- 1.94628e-07
+   (n,elastic)                          1.14979e-05 +/- 1.87067e-07
+   Scattering Rate                      1.1915e-05 +/- 1.86601e-07
+   Decay Rate                           0 +/- 0
+ O16
+   Fission Rate                         0 +/- 0
+   Total Reaction Rate                  1.63397 +/- 0.00256913
+   Absorption Rate                      0.00168351 +/- 1.01868e-05
+   (n,elastic)                          1.63146 +/- 0.00256565
+   Scattering Rate                      1.63228 +/- 0.00256928
+   Decay Rate                           0 +/- 0
+ H1
+   Fission Rate                         0 +/- 0
+   Total Reaction Rate                  6.40457 +/- 0.0138366
+   Absorption Rate                      0.0125956 +/- 6.6101e-05
+   (n,elastic)                          6.39198 +/- 0.0137832
+   Scattering Rate                      6.39198 +/- 0.0137832
+   Decay Rate                           0 +/- 0
  =========================>     TALLY 1: FLUX     <=========================
 
  Total Material
-   Flux                                 23.4182 +/- 0.0258251
+   Flux                                 14.7748 +/- 0.0209128
