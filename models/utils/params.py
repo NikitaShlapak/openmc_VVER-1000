@@ -14,6 +14,9 @@ class GeometryParams:
     tube_outer_radius = 1.26 / 2
     tube_inner_radius = 1.26 / 2 - 0.085
 
+    absorber_rod_inner_radius = tvel_fuel_radius
+    absorber_rod_outer_radius = tvel_global_radius
+
     def __init__(self):
         self.TVS_edge_length = self.tvel_step * self.n_tvel_rows
         # print(self.TVS_edge_length)

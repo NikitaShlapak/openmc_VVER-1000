@@ -8,6 +8,7 @@
     <color id="3" rgb="0 100 0" />
     <color id="5" rgb="120 120 255" />
     <color id="7" rgb="0 0 0" />
+    <color id="9" rgb="250 125 125" />
   </plot>
   <plot basis="xz" color_by="material" id="6" type="slice">
     <origin>0.0 0.0 0.0</origin>
@@ -17,6 +18,7 @@
     <color id="3" rgb="0 100 0" />
     <color id="5" rgb="120 120 255" />
     <color id="7" rgb="0 0 0" />
+    <color id="9" rgb="250 125 125" />
   </plot>
   <plot basis="xz" color_by="material" id="7" type="slice">
     <origin>0 0 -176.0</origin>
@@ -26,6 +28,7 @@
     <color id="3" rgb="0 100 0" />
     <color id="5" rgb="120 120 255" />
     <color id="7" rgb="0 0 0" />
+    <color id="9" rgb="250 125 125" />
   </plot>
   <plot basis="xy" color_by="material" id="8" type="slice">
     <origin>0.0 0.0 0.0</origin>
@@ -35,5 +38,6 @@
     <color id="3" rgb="0 100 0" />
     <color id="5" rgb="120 120 255" />
     <color id="7" rgb="0 0 0" />
+    <color id="9" rgb="250 125 125" />
   </plot>
 </plots>

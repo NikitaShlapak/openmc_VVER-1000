@@ -21,7 +21,7 @@ if __name__ == "__main__":
     params = GeometryParams()
 
     # Plotting by universe...
-    colors = {water_mat: (120, 120, 255), cladding_mat: 'black', fuel_mat: (0,200,0), fuel_with_Gd_mat:(0,100,0)}
+    colors = {water_mat: (120, 120, 255), cladding_mat: 'black', fuel_mat: (0,200,0), fuel_with_Gd_mat:(0,100,0), absorber_mat:(250,125,125)}
     color_data = dict(color_by='material', colors=colors)
     width = (params.TVS_edge_length * 2.1, params.TVS_edge_length * 2.1)
 
