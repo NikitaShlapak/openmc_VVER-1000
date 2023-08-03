@@ -2,20 +2,16 @@
 <materials>
   <material depletable="true" id="1" name="Uranium Oxide" volume="324186.59662809694">
     <density units="g/cm3" value="10.5" />
-    <nuclide ao="0.0003257371699960529" name="U234" />
-    <nuclide ao="0.03644350411257196" name="U235" />
-    <nuclide ao="0.9630638299641983" name="U238" />
-    <nuclide ao="0.00016692875323380264" name="U236" />
     <nuclide ao="1.9952412" name="O16" />
     <nuclide ao="0.000758" name="O17" />
     <nuclide ao="0.0040008" name="O18" />
+    <nuclide ao="0.0003257371699960529" name="U234" />
+    <nuclide ao="0.03644350411257196" name="U235" />
+    <nuclide ao="0.00016692875323380264" name="U236" />
+    <nuclide ao="0.9630638299641983" name="U238" />
   </material>
   <material depletable="true" id="3" name="U+Gg Oxide" volume="19848.158977230425">
     <density units="g/cm3" value="10.28554431885782" />
-    <nuclide ao="0.00010192150321298982" name="U234" />
-    <nuclide ao="0.011402987020324143" name="U235" />
-    <nuclide ao="0.30133777253974336" name="U238" />
-    <nuclide ao="5.223115759023006e-05" name="U236" />
     <nuclide ao="0.6610024420133463" name="O16" />
     <nuclide ao="0.000251117434346342" name="O17" />
     <nuclide ao="0.0013254229964813258" name="O18" />
@@ -26,6 +22,10 @@
     <nuclide ao="0.0038383354849204753" name="Gd157" />
     <nuclide ao="0.0060922845652028506" name="Gd158" />
     <nuclide ao="0.005361406626221188" name="Gd160" />
+    <nuclide ao="0.00010192150321298982" name="U234" />
+    <nuclide ao="0.011402987020324143" name="U235" />
+    <nuclide ao="5.223115759023006e-05" name="U236" />
+    <nuclide ao="0.30133777253974336" name="U238" />
   </material>
   <material id="5" name="Water, Liquid">
     <density units="g/cm3" value="0.998207" />
@@ -37,6 +37,9 @@
   </material>
   <material id="7" name="Zircaloy-2">
     <density units="g/cm3" value="6.56" />
+    <nuclide ao="0.0067798295976" name="O16" />
+    <nuclide ao="2.575684e-06" name="O17" />
+    <nuclide ao="1.35947184e-05" name="O18" />
     <nuclide ao="7.573335e-05" name="Cr50" />
     <nuclide ao="0.00146044227" name="Cr52" />
     <nuclide ao="0.00016560242999999998" name="Cr53" />
@@ -50,9 +53,11 @@
     <nuclide ao="8.800028e-06" name="Ni61" />
     <nuclide ao="2.805834e-05" name="Ni62" />
     <nuclide ao="7.145632000000001e-06" name="Ni64" />
-    <nuclide ao="0.0067798295976" name="O16" />
-    <nuclide ao="2.575684e-06" name="O17" />
-    <nuclide ao="1.35947184e-05" name="O18" />
+    <nuclide ao="0.5033770244999999" name="Zr90" />
+    <nuclide ao="0.10977434819999998" name="Zr91" />
+    <nuclide ao="0.1677923415" name="Zr92" />
+    <nuclide ao="0.1700426178" name="Zr94" />
+    <nuclide ao="0.027394668" name="Zr96" />
     <nuclide ao="0.0001036542" name="Sn112" />
     <nuclide ao="7.05276e-05" name="Sn114" />
     <nuclide ao="3.63324e-05" name="Sn115" />
@@ -63,11 +68,6 @@
     <nuclide ao="0.0034814987999999994" name="Sn120" />
     <nuclide ao="0.0004947618" name="Sn122" />
     <nuclide ao="0.0006187193999999999" name="Sn124" />
-    <nuclide ao="0.5033770244999999" name="Zr90" />
-    <nuclide ao="0.10977434819999998" name="Zr91" />
-    <nuclide ao="0.1677923415" name="Zr92" />
-    <nuclide ao="0.1700426178" name="Zr94" />
-    <nuclide ao="0.027394668" name="Zr96" />
   </material>
   <material id="9" name="Boron Carbide (B4C)">
     <density units="g/cm3" value="2.52" />

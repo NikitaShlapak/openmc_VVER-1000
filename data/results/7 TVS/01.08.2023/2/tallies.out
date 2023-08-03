@@ -1,0 +1,41 @@
+ =========================>     TALLY 2: FUEL     <=========================
+
+ U235
+   Fission Rate                         0.096938 +/- 0.000603942
+   Total Reaction Rate                  0.149673 +/- 0.000741773
+   Absorption Rate                      0.118785 +/- 0.000713469
+   (n,elastic)                          0.0269331 +/- 5.15085e-05
+   Scattering Rate                      0.0308874 +/- 5.4813e-05
+   Decay Rate                           0.000641593 +/- 3.9771e-06
+ U238
+   Fission Rate                         0.0138072 +/- 3.36188e-05
+   Total Reaction Rate                  0.970962 +/- 0.00188421
+   Absorption Rate                      0.0707569 +/- 0.000311986
+   (n,elastic)                          0.757593 +/- 0.0015785
+   Scattering Rate                      0.900205 +/- 0.00168846
+   Decay Rate                           0.000498378 +/- 1.16553e-06
+ Gd152
+   Fission Rate                         0 +/- 0
+   Total Reaction Rate                  1.45248e-05 +/- 3.1464e-07
+   Absorption Rate                      4.44268e-06 +/- 1.85096e-07
+   (n,elastic)                          9.68797e-06 +/- 1.70992e-07
+   Scattering Rate                      1.00821e-05 +/- 1.72354e-07
+   Decay Rate                           0 +/- 0
+ O16
+   Fission Rate                         0 +/- 0
+   Total Reaction Rate                  1.57665 +/- 0.00304474
+   Absorption Rate                      0.00166719 +/- 1.26587e-05
+   (n,elastic)                          1.57417 +/- 0.00303991
+   Scattering Rate                      1.57498 +/- 0.00304279
+   Decay Rate                           0 +/- 0
+ H1
+   Fission Rate                         0 +/- 0
+   Total Reaction Rate                  6.17772 +/- 0.0175049
+   Absorption Rate                      0.0116124 +/- 9.04646e-05
+   (n,elastic)                          6.1661 +/- 0.0174315
+   Scattering Rate                      6.1661 +/- 0.0174315
+   Decay Rate                           0 +/- 0
+ =========================>     TALLY 1: FLUX     <=========================
+
+ Total Material
+   Flux                                 14.605 +/- 0.0238055
