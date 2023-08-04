@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <settings>
   <run_mode>fixed source</run_mode>
-  <particles>10000</particles>
-  <batches>50</batches>
-  <inactive>10</inactive>
+  <particles>70000</particles>
+  <batches>250</batches>
+  <inactive>20</inactive>
   <source strength="1.0">
     <space type="fission">
       <parameters>-100 -100 -175.0 100 100 175.0</parameters>
     </space>
-    <time parameters="500000000000000000000 1" type="uniform" />
   </source>
 </settings>
