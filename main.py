@@ -28,7 +28,7 @@ if __name__ == "__main__":
     colors = {water_mat: (120, 120, 255), cladding_mat: 'black', fuel_mat: (0, 200, 0), fuel_with_Gd_mat: (0, 100, 0),
               absorber_mat: (250, 125, 125)}
     color_data = dict(color_by='material', colors=colors)
-    width = np.array([params.TVS_edge_length * 5.1, params.TVS_edge_length * 5.1, ])
+    width = np.array([params.TVS_edge_length * 6, params.TVS_edge_length * 6, ])
     scale = 5.1 / 2
     fig, ax = plt.subplots(2, 2)
 
@@ -52,15 +52,16 @@ if __name__ == "__main__":
     plots[0].origin = (0, 0, GeometryParams.tvel_heigh / 2 - 1)
     plots[2].origin = (0, 0, -GeometryParams.tvel_heigh / 2 - 1)
     plots[-1].basis = 'xy'
+    plots[-1].pixels = (3200, 3200)
 
     plots = openmc.Plots(plots)
 
     # Settings
     setting = openmc.Settings()
-    setting.batches = 100
+    setting.batches = 70
     setting.inactive = 20
-    setting.particles = 10000
-    setting.run_mode = 'fixed source'
+    setting.particles = 1000
+    # setting.run_mode = 'fixed source'
 
     source = openmc.Source()
     source.space = stats.Box([-100, -100, -350 / 2], [100, 100, 350 / 2], only_fissionable=True)
@@ -76,7 +77,11 @@ if __name__ == "__main__":
     U_tally.scores = ['fission', 'total', 'absorption', 'elastic', 'scatter', 'decay-rate']
     U_tally.nuclides = ['U235', 'U238', 'Gd152', 'O16', 'H1']
 
-    tallies = openmc.Tallies([U_tally, flux_tally])
+    heat_tally = openmc.Tally(name='heating')
+    heat_tally.scores = ['heating']
+    heat_tally.nuclides = ['U235', 'U238', 'Gd152', 'O16', 'H1','Zr90']
+
+    tallies = openmc.Tallies([U_tally, flux_tally, heat_tally])
 
     # XML export
     materials.export_to_xml('data/xmls/materials.xml')
@@ -85,18 +90,21 @@ if __name__ == "__main__":
     tallies.export_to_xml('data/xmls/tallies.xml')
     plots.export_to_xml('data/xmls/plots.xml')
 
-
     # RUN
-    model = openmc.Model(geometry=geometry, materials=materials, tallies=tallies, plots=plots, settings=setting)
-    # openmc.plot_geometry(path_input='data/xmls/', output=False)
+    # model = openmc.Model(geometry=geometry, materials=materials, tallies=tallies, plots=plots, settings=setting)
+    if params.rod_inserted:
+        rods_cwd = 'rods_in'
+    else:
+        rods_cwd = 'rods_out'
+    openmc.plot_geometry(path_input='data/xmls/', output=False, )
     openmc.run(output=True, path_input='data/xmls/')
 
     # Deplition
-    operator = deplete.CoupledOperator(model=model)
-    power = 1000e6/163*7
-    time_steps = [1]
-    integrator = deplete.PredictorIntegrator(operator, time_steps, power, timestep_units='s')
-    integrator.integrate()
+    # operator = deplete.CoupledOperator(model=model)
+    # power = 1000e6/163*7
+    # time_steps = [1]
+    # integrator = deplete.PredictorIntegrator(operator, time_steps, power, timestep_units='s')
+    # integrator.integrate()
 
     # with openmc.StatePoint('statepoint.100.h5') as sp:
     #     print(sp.keff)
@@ -106,4 +114,7 @@ if __name__ == "__main__":
     #     output_tally = sp.get_tally(name='flux')
     #     flux = output_tally.get_pandas_dataframe()
     #     # flux.to_csv('out_flux_3.6.csv')
-    #     print(df, flux, sep='\n\n')
+    #     output_tally = sp.get_tally(name='heating')
+    #     heat = output_tally.get_pandas_dataframe()
+    #     # flux.to_csv('out_flux_3.6.csv')
+    #     print(df, flux,heat, sep='\n\n')

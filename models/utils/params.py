@@ -25,7 +25,7 @@ class GeometryParams:
 
 
 class MaterialParams:
-    U235_enrichment_high = 3.6
+    U235_enrichment_high = 3.
     U235_enrichment_medium = 2.4
     U235_enrichment_low = 1.6
 

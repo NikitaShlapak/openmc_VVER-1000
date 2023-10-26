@@ -1,0 +1,55 @@
+ =========================>     TALLY 2: FUEL     <=========================
+
+ U235
+   Fission Rate                         0.356577 +/- 0.00285832
+   Total Reaction Rate                  0.48473 +/- 0.0035115
+   Absorption Rate                      0.429739 +/- 0.00339717
+   (n,elastic)                          0.0501101 +/- 0.000153601
+   Scattering Rate                      0.0549909 +/- 0.000164687
+   Decay Rate                           0.00235449 +/- 1.88134e-05
+ U238
+   Fission Rate                         0.0198355 +/- 0.000152529
+   Total Reaction Rate                  2.00596 +/- 0.0056112
+   Absorption Rate                      0.182691 +/- 0.00106911
+   (n,elastic)                          1.61285 +/- 0.00471861
+   Scattering Rate                      1.82327 +/- 0.00510773
+   Decay Rate                           0.000715607 +/- 5.30946e-06
+ Gd152
+   Fission Rate                         0 +/- 0
+   Total Reaction Rate                  4.6248e-05 +/- 1.6496e-06
+   Absorption Rate                      1.5079e-05 +/- 9.33051e-07
+   (n,elastic)                          3.04948e-05 +/- 9.2779e-07
+   Scattering Rate                      3.1169e-05 +/- 9.26933e-07
+   Decay Rate                           0 +/- 0
+ O16
+   Fission Rate                         0 +/- 0
+   Total Reaction Rate                  4.37608 +/- 0.0126727
+   Absorption Rate                      0.00281061 +/- 5.67288e-05
+   (n,elastic)                          4.37188 +/- 0.0126802
+   Scattering Rate                      4.37327 +/- 0.0126792
+   Decay Rate                           0 +/- 0
+ H1
+   Fission Rate                         0 +/- 0
+   Total Reaction Rate                  29.5642 +/- 0.172679
+   Absorption Rate                      0.164364 +/- 0.00170984
+   (n,elastic)                          29.3999 +/- 0.17099
+   Scattering Rate                      29.3999 +/- 0.17099
+   Decay Rate                           0 +/- 0
+ =========================>     TALLY 1: FLUX     <=========================
+
+ Total Material
+   Flux                                 38.022 +/- 0.096063
+ =======================>     TALLY 3: HEATING     <========================
+
+ U235
+   heating                              6.26227e+07 +/- 501826
+ U238
+   heating                              3.52939e+06 +/- 27116
+ Gd152
+   heating                              0.0278547 +/- 0.000357251
+ O16
+   heating                              149517 +/- 788.6
+ H1
+   heating                              1.27984e+06 +/- 6320.63
+ Zr90
+   heating                              8053.84 +/- 127.325

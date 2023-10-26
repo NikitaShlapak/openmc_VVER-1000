@@ -2,7 +2,7 @@
 <plots>
   <plot basis="xz" color_by="material" id="5" type="slice">
     <origin>0 0 174.0</origin>
-    <width>71.52749999999999 71.52749999999999</width>
+    <width>84.14999999999999 84.14999999999999</width>
     <pixels>500 500</pixels>
     <color id="1" rgb="0 200 0" />
     <color id="3" rgb="0 100 0" />
@@ -12,7 +12,7 @@
   </plot>
   <plot basis="xz" color_by="material" id="6" type="slice">
     <origin>0.0 0.0 0.0</origin>
-    <width>71.52749999999999 71.52749999999999</width>
+    <width>84.14999999999999 84.14999999999999</width>
     <pixels>500 500</pixels>
     <color id="1" rgb="0 200 0" />
     <color id="3" rgb="0 100 0" />
@@ -22,7 +22,7 @@
   </plot>
   <plot basis="xz" color_by="material" id="7" type="slice">
     <origin>0 0 -176.0</origin>
-    <width>71.52749999999999 71.52749999999999</width>
+    <width>84.14999999999999 84.14999999999999</width>
     <pixels>500 500</pixels>
     <color id="1" rgb="0 200 0" />
     <color id="3" rgb="0 100 0" />
@@ -32,8 +32,8 @@
   </plot>
   <plot basis="xy" color_by="material" id="8" type="slice">
     <origin>0.0 0.0 0.0</origin>
-    <width>71.52749999999999 71.52749999999999</width>
-    <pixels>500 500</pixels>
+    <width>84.14999999999999 84.14999999999999</width>
+    <pixels>3200 3200</pixels>
     <color id="1" rgb="0 200 0" />
     <color id="3" rgb="0 100 0" />
     <color id="5" rgb="120 120 255" />

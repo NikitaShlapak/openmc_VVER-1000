@@ -7,4 +7,8 @@
   <tally id="1" name="flux">
     <scores>flux</scores>
   </tally>
+  <tally id="3" name="heating">
+    <nuclides>U235 U238 Gd152 O16 H1 Zr90</nuclides>
+    <scores>heating</scores>
+  </tally>
 </tallies>

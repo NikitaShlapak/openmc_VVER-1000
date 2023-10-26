@@ -2,30 +2,30 @@
 <materials>
   <material depletable="true" id="1" name="Uranium Oxide" volume="324186.59662809694">
     <density units="g/cm3" value="10.5" />
-    <nuclide ao="0.0003257371699960529" name="U234" />
-    <nuclide ao="0.03644350411257196" name="U235" />
-    <nuclide ao="0.9630638299641983" name="U238" />
-    <nuclide ao="0.00016692875323380264" name="U236" />
+    <nuclide ao="0.00014480966306692014" name="U234" />
+    <nuclide ao="0.01620131823329653" name="U235" />
+    <nuclide ao="0.9835796622843757" name="U238" />
+    <nuclide ao="7.420981926091186e-05" name="U236" />
     <nuclide ao="1.9952412" name="O16" />
     <nuclide ao="0.000758" name="O17" />
     <nuclide ao="0.0040008" name="O18" />
   </material>
   <material depletable="true" id="3" name="U+Gg Oxide" volume="19848.158977230425">
-    <density units="g/cm3" value="10.28554431885782" />
-    <nuclide ao="0.00010192150321298982" name="U234" />
-    <nuclide ao="0.011402987020324143" name="U235" />
-    <nuclide ao="0.30133777253974336" name="U238" />
-    <nuclide ao="5.223115759023006e-05" name="U236" />
-    <nuclide ao="0.6610024420133463" name="O16" />
-    <nuclide ao="0.000251117434346342" name="O17" />
-    <nuclide ao="0.0013254229964813258" name="O18" />
-    <nuclide ao="4.9052210669910225e-05" name="Gd152" />
-    <nuclide ao="0.0005346690963020215" name="Gd154" />
-    <nuclide ao="0.003629863589573356" name="Gd155" />
-    <nuclide ao="0.005020493762065312" name="Gd156" />
-    <nuclide ao="0.0038383354849204753" name="Gd157" />
-    <nuclide ao="0.0060922845652028506" name="Gd158" />
-    <nuclide ao="0.005361406626221188" name="Gd160" />
+    <density units="g/cm3" value="10.285544318857823" />
+    <nuclide ao="4.530957101526696e-05" name="U234" />
+    <nuclide ao="0.0050692389132433405" name="U235" />
+    <nuclide ao="0.307752753604926" name="U238" />
+    <nuclide ao="2.32195490592265e-05" name="U236" />
+    <nuclide ao="0.6610015659862115" name="O16" />
+    <nuclide ao="0.0002511171015401789" name="O17" />
+    <nuclide ao="0.0013254212398970287" name="O18" />
+    <nuclide ao="4.9062748068215004e-05" name="Gd152" />
+    <nuclide ao="0.0005347839539435436" name="Gd154" />
+    <nuclide ao="0.0036306433570479093" name="Gd155" />
+    <nuclide ao="0.005021572264781805" name="Gd156" />
+    <nuclide ao="0.0038391600363378237" name="Gd157" />
+    <nuclide ao="0.0060935933100723025" name="Gd158" />
+    <nuclide ao="0.005362558363855899" name="Gd160" />
   </material>
   <material id="5" name="Water, Liquid">
     <density units="g/cm3" value="0.998207" />
